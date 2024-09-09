@@ -32,6 +32,13 @@ Run the job.
 cd getting_started
 positron run-job
 ```
+Take note of the job name (e.g. `occupational_amethyst_sebulba` then go to `https://beta.positronsupercompute.com/portal/` in your browser to monitor the job.
+
+You can also run with the `--stream-stdout` to see realtime job logs in your command line.
+
+```sh
+positron run-job --stream-stdout
+```
 
 See available CLI options with `positron run-job --help`.
 
