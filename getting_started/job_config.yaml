@@ -1,0 +1,17 @@
+version: 1.0
+python_job:
+  # Dev
+  funding_group_id: 44d273ad-75b4-4af4-8a33-0ab652c2c315
+  environment_id: c2fab2e7-7e1c-4180-8d77-53ddbe2af281
+  image: pytorch-training:2.3.0-gpu-py311-cu121-ubuntu20.04-ec2
+  # Local
+  # institution_id: fef75332-0b43-4654-a934-bedfef004125
+  # funding_group_id: 44d273ad-75b4-4af4-8a33-0ab652c2c315
+  # image: pytorch-training:2.2.0-cpu-py310-ubuntu20.04-ec2
+  # workspace_dir: /home/username/workspace
+  # entry_point: main.py
+  # job_args: main.py
+  max_tokens: "100"
+  max_time: "2:30"
+  commands: python main.py
+  
