@@ -52,7 +52,7 @@ Here is a short explanation of each parameters
 
 | Funding Group Name   | ID                                   |
 | -------------------- | ------------------------------------ |
-| UIUC Test | 5e9e3b08-0063-41ac-a782-d4964cfb8960 |
+| Test                 | 5e9e3b08-0063-41ac-a782-d4964cfb8960 |
 
 
 2. `environment_id:` (optional) - This is the hardware that is used to run your job.
