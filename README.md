@@ -6,10 +6,19 @@ Each example will, by default, run on a Nvidia A10 GPU.
 Prerequisites:
 - Python 3.10 or greater installed
 - pip installed
+- You must receive an email invite from Positron/Robbie to use the service.
+
+  
 
 ## Setup
 
-### 1. Create a python virtual environment. 
+### 1. Click on the email invite
+
+Click on the "sign up" link and you will be asked to create a username and password.
+
+![image](https://github.com/user-attachments/assets/3fda77d6-131c-4a1c-8e9d-ebe85f340431)
+
+### 2. Create a python virtual environment. 
 
 Navigate to a directory that you would like the environment to live in and run the venv command.
 
@@ -18,7 +27,7 @@ On Windows or Mac enter the following at the command line/shell:
 python -m venv positronpython
 ```
 
-### 2. Activate your virtual environment
+### 3. Activate your virtual environment
 
 Mac:
 ```sh
@@ -29,7 +38,7 @@ Windows:
 cd positronpython/Scripts && activate && cd ../../
 ```
 
-### 3. Install the Positron Python package
+### 4. Install the Positron Python package
 
 This command will install the Robbie Python package on your local machine.
 ```sh
@@ -40,17 +49,14 @@ This command will pop up a web browswer anad ask you to signup and enter an emai
 ```sh
 positron login
 ```
-When you run the command a broswer window will pop up and you will be asked for device confirmation.
-Once you confirm, you will be asked to create a username and password (click "sign up)
-
-![image](https://github.com/user-attachments/assets/3fda77d6-131c-4a1c-8e9d-ebe85f340431)
+When you run the command a broswer window will pop up and you will be asked for device confirmation and to login using your previous username and password.
 
 
-### 4. Download the Robbie Examples to your local machine:
+### 5. Download the Robbie Examples to your local machine:
 
 [https://github.com/Positron-Networks/robbie-examples](https://github.com/Positron-Networks/robbie-examples)
 
-## 5. Validate your setup by running `getting_started`.
+### 6. Validate your setup by running `getting_started`.
 
 Run the job.
 
@@ -76,7 +82,7 @@ positron run-job --stream-stdout
 
 See available CLI options with `positron run-job --help`.
 
-### 6. Try other examples 
+### 7. Try other examples 
 
 ```sh
 cd <example>
