@@ -40,6 +40,11 @@ This command will pop up a web browswer anad ask you to signup and enter an emai
 ```sh
 positron login
 ```
+When you run the command a broswer window will pop up and you will be asked for device confirmation.
+Once you confirm, you will be asked to create a username and password (click "sign up)
+
+![image](https://github.com/user-attachments/assets/3fda77d6-131c-4a1c-8e9d-ebe85f340431)
+
 
 ### 4. Download the Robbie Examples to your local machine:
 
