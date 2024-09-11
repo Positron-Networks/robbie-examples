@@ -12,7 +12,9 @@ Prerequisites:
 
 ## Setup
 
-### 1. Click on the email invite
+### 1. In the inviation email clock on the "Join Positron" link
+
+<img width="621" alt="image" src="https://github.com/user-attachments/assets/6c351dee-8ce8-4f74-8e0e-3779d2542eec">
 
 Click on the "sign up" link and you will taken to a login screen where you will an account with a username and password.
 
