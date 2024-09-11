@@ -14,7 +14,7 @@ Prerequisites:
 
 ### 1. Click on the email invite
 
-Click on the "sign up" link and you will be asked to create a username and password.
+Click on the "sign up" link and you will taken to a login screen where you will an account with a username and password.
 
 ![image](https://github.com/user-attachments/assets/3fda77d6-131c-4a1c-8e9d-ebe85f340431)
 
