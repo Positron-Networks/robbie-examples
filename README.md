@@ -12,7 +12,7 @@ Prerequisites:
 
 ## Setup
 
-### 1. In the inviation email clock on the "Join Positron" link
+### 1. In the inviation email click on the "Join Positron" link
 
 <img width="621" alt="image" src="https://github.com/user-attachments/assets/6c351dee-8ce8-4f74-8e0e-3779d2542eec">
 
