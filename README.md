@@ -39,7 +39,9 @@ This command will pop up a web browswer anad ask you to signup and enter an emai
 positron login
 ```
 
-4. Validate your setup by running `getting_started`.
+4. Download the Robbie Examples github repo from: `https://github.com/Positron-Networks/robbie-examples`
+
+5. Validate your setup by running `getting_started`.
 
 Run the job.
 
@@ -57,7 +59,7 @@ positron run-job --stream-stdout
 
 See available CLI options with `positron run-job --help`.
 
-5. Try other examples 
+6. Try other examples 
 
 ```sh
 cd <example>
