@@ -43,7 +43,7 @@ positron login
 
 ### 4. Download the Robbie Examples to your local machine:
 
-`[https://github.com/Positron-Networks/robbie-examples](https://github.com/Positron-Networks/robbie-examples.git)`
+`[https://github.com/Positron-Networks/robbie-examples]`
 
 ## 5. Validate your setup by running `getting_started`.
 
