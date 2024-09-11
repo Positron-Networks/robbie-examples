@@ -53,9 +53,15 @@ Run the job.
 cd getting_started
 positron run-job
 ```
-Take note of the job name (e.g. `occupational_amethyst_sebulba` then go to Robbie Portal in your browser to monitor the job.
+Take note of the job name (e.g. `occupational_amethyst_sebulba`) then go to Robbie Portal in your browser to monitor the job.
 
-Robbie Portal: [https://beta.positronsupercompute.com/portal](https://beta.positronsupercompute.com/portal)
+Robbie Portal: [https://beta.positronsupercompute.com](https://beta.positronsupercompute.com)
+
+Note since the service is in Beta, the portal landing page is not fully functional.
+Please login (if you are not already, and click the "My Dashboard" button in the upper righthand corner.
+
+<img width="222" alt="image" src="https://github.com/user-attachments/assets/3eff3c03-c949-4e96-9a8b-58fb5ab4c50c">
+
 
 You can also run with the `--stream-stdout` to see realtime job logs in your command line.
 
