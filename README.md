@@ -8,6 +8,7 @@ Prerequisites:
 - pip installed
 - You must receive an email invite from Positron/Robbie to use the service.
 
+For support email: support@robbie.run
   
 
 ## Setup
