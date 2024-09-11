@@ -43,7 +43,7 @@ positron login
 
 ### 4. Download the Robbie Examples to your local machine:
 
-[https://github.com/Positron-Networks/robbie-examples](https://github.com/Positron-Networks/robbie-examples).
+[https://github.com/Positron-Networks/robbie-examples](https://github.com/Positron-Networks/robbie-examples)
 
 ## 5. Validate your setup by running `getting_started`.
 
@@ -53,7 +53,9 @@ Run the job.
 cd getting_started
 positron run-job
 ```
-Take note of the job name (e.g. `occupational_amethyst_sebulba` then go to `https://beta.positronsupercompute.com/portal/` in your browser to monitor the job.
+Take note of the job name (e.g. `occupational_amethyst_sebulba` then go to Robbie Portal in your browser to monitor the job.
+
+Robbie Portal: [https://beta.positronsupercompute.com/portal](https://beta.positronsupercompute.com/portal)
 
 You can also run with the `--stream-stdout` to see realtime job logs in your command line.
 
