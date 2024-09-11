@@ -9,7 +9,9 @@ Prerequisites:
 
 ## Setup
 
-### 1. Create a python virtual environment. Navigate to a directory that you would like the environment to live in and run the venv command.
+### 1. Create a python virtual environment. 
+
+Navigate to a directory that you would like the environment to live in and run the venv command.
 
 On Windows or Mac enter the following at the command line/shell:
 ```sh
