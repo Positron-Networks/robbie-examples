@@ -7,14 +7,20 @@ Each example will, by default, run on a Nvidia A10 GPU.
 
 1. Create a python virtual environment. Navigate to a directory that you would like the environment to live in and run the venv command.
 
+On Windows or Mac enter the following at the command line/shell:
 ```sh
 python -m venv positronpython
 ```
 
 2. Activate your virtual environment
 
+Mac:
 ```sh
 source ./positronpython/bin/activate
+```
+Windows:
+```sh
+cd positronpython/Scripts && activate && cd ../../
 ```
 
 3. Install the Positron Python package
