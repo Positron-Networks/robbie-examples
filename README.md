@@ -3,6 +3,10 @@
 This repo contains a collection of PyTorch examples adapted for usage on the Positron/Robbie platform.
 Each example will, by default, run on a Nvidia A10 GPU.
 
+Prerequisites:
+- Python 3.10 or greater installed
+- pip installed
+
 ## Setup
 
 1. Create a python virtual environment. Navigate to a directory that you would like the environment to live in and run the venv command.
@@ -25,8 +29,13 @@ cd positronpython/Scripts && activate && cd ../../
 
 3. Install the Positron Python package
 
+This command will install the Robbie Python package on your local machine.
 ```sh
 pip install positron_networks
+```
+
+This command will pop up a web browswer anad ask you to signup and enter an email and password.
+```sh
 positron login
 ```
 
