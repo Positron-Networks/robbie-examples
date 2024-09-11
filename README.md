@@ -13,7 +13,7 @@ For support email: support@robbie.run
 
 ## Setup
 
-### 1. In the inviation email click on the "Join Positron" link
+### Step 1. In the inviation email click on the "Join Positron" link
 
 <img width="621" alt="image" src="https://github.com/user-attachments/assets/6c351dee-8ce8-4f74-8e0e-3779d2542eec">
 
@@ -22,7 +22,7 @@ Click on the "sign up" link and you will taken to a login screen where you will 
 <img width="352" alt="image" src="https://github.com/user-attachments/assets/bd782a7b-107e-4e05-ad50-496d7c127d38">
 
 
-### 2. Create a python virtual environment. 
+### Step 2. Create and activate a python virtual environment. 
 
 Navigate to a directory that you would like the environment to live in and run the venv command.
 
@@ -30,8 +30,7 @@ On Windows or Mac enter the following at the command line/shell:
 ```sh
 python -m venv positronpython
 ```
-
-### 3. Activate your virtual environment
+Next activate the environment.
 
 Mac:
 ```sh
@@ -42,7 +41,7 @@ Windows:
 cd positronpython/Scripts && activate && cd ../../
 ```
 
-### 4. Install the Positron Python package
+### Step 3. Install the Positron Python package and login
 
 This command will install the Robbie Python package on your local machine.
 ```sh
@@ -56,11 +55,11 @@ positron login
 When you run the command a broswer window will pop up and you will be asked for device confirmation and to login using your previous username and password.
 
 
-### 5. Download the Robbie Examples to your local machine:
+### Step 4. Download the Robbie Examples to your local machine:
 
 [https://github.com/Positron-Networks/robbie-examples](https://github.com/Positron-Networks/robbie-examples)
 
-### 6. Validate your setup by running `getting_started`.
+### 5. Validate your setup by running `getting_started`.
 
 Run the job.
 
@@ -86,7 +85,9 @@ positron run-job --stream-stdout
 
 See available CLI options with `positron run-job --help`.
 
-### 7. Try other examples 
+### Congratulations - you have run your first job
+
+Try other examples 
 
 ```sh
 cd <example>
