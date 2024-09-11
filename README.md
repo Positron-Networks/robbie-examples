@@ -41,7 +41,9 @@ This command will pop up a web browswer anad ask you to signup and enter an emai
 positron login
 ```
 
-### 4. Download the Robbie Examples github repo from: `https://github.com/Positron-Networks/robbie-examples`
+### 4. Download the Robbie Examples to your local machine:
+
+`https://github.com/Positron-Networks/robbie-examples`
 
 ## 5. Validate your setup by running `getting_started`.
 
