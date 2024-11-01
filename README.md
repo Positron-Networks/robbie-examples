@@ -1,150 +1,159 @@
 # Examples
+This repo contains a collection of PyTorch examples adapted for usage on the Robbie platform.
 
-This repo contains a collection of PyTorch examples adapted for usage on the Positron/Robbie platform.
-Each example will, by default, run on a Nvidia A10 GPU.
-
-Prerequisites:
-- Python 3.10 or greater installed
-- pip installed
-- You must receive an email invite from Positron/Robbie to use the service.
+Prerequisites
+- Python 3.9 or greater
+- pip
 
 For support, email: support@robbie.run
-  
+
+[Setup](#setup)  
+[Run Your First Job](#run-your-first-job)  
+[Command Runner](#command-runner)
+[Images](#images)
 
 ## Setup
 
-### Step 1. In the inviation email click on the "Join Positron" link
+### Step 1. Sign Up for Robbie
+Visit https://robbie.run/portal/signup and sign up with your email address or Google. 
 
-<img width="621" alt="image" src="https://github.com/user-attachments/assets/6c351dee-8ce8-4f74-8e0e-3779d2542eec">
+Check your email for a message from Robbie and click Verify Your Account in the email.
 
-Click on the "sign up" link and you will taken to a login screen where you will an account with a username and password.
-
-<img width="352" alt="image" src="https://github.com/user-attachments/assets/bd782a7b-107e-4e05-ad50-496d7c127d38">
-
-
-### Step 2. Create and activate a python virtual environment. 
-
-Navigate to a directory that you would like the environment to live in and run the venv command.
-
-On Windows or Mac enter the following at the command line/shell:
-```sh
-python -m venv positronpython
-```
-Next activate the environment.
-
-Mac:
-```sh
-source ./positronpython/bin/activate
-```
-Windows:
-```sh
-cd positronpython/Scripts && activate && cd ../../
-```
-
-### Step 3. Install the Positron Python package and login
-
-This command will install the Robbie Python package on your local machine.
-```sh
-pip install positron_networks
-```
-
-This command will pop up a web browswer anad ask you to signup and enter an email and password.
-```sh
-positron login
-```
-When you run the command a broswer window will pop up and you will be asked for device confirmation and to login using your previous username and password.
-
-
-### Step 4. Download the Robbie Examples to your local machine:
-
+### Step 2. Download Robbie Examples to your local machine
 [https://github.com/Positron-Networks/robbie-examples](https://github.com/Positron-Networks/robbie-examples)
 
-### 5. Validate your setup by running `getting_started`.
-
-Run the job.
-
+### Step 3. Create and activate a Python virtual environment
+Navigate to a directory where you would like the environment to live and create a virtual environment. 
+This should NOT be the location that your codebase lives to avoid unnecessarily uploading virtual environment files to the Robbie Job Runner.
 ```sh
-cd getting_started
-positron run-job
-```
-Take note of the job name (e.g. `occupational_amethyst_sebulba`) then go to Robbie Portal in your browser to monitor the job.
-
-Robbie Portal: [https://beta.positronsupercompute.com](https://beta.positronsupercompute.com)
-
-**NOTE: The is a beta service and the the portal landing page is not fully functional.
-Please login (if you are not already, and click the "My Dashboard" button in the upper righthand corner.
-
-<img width="222" alt="image" src="https://github.com/user-attachments/assets/3eff3c03-c949-4e96-9a8b-58fb5ab4c50c">
-
-
-You can also run with the `--stream-stdout` to see realtime job logs in your command line.
-
-```sh
-positron run-job --stream-stdout
+python -m venv venv
 ```
 
-See available CLI options with `positron run-job --help`.
+Activate the `venv` environment.  
 
-### Congratulations - you have run your first job
-
-Try other examples 
-
+*macOS/Linux*
 ```sh
-cd <example>
-positron run-job
+source ./venv/bin/activate
+```
+*Windows PowerShell*
+```sh
+.\venv\Scripts\Activate.ps1
+```
+*Windows Command Prompt*
+```sh
+.\venv\Scripts\activate.bat
 ```
 
-## Customizing your jobs
-
-In each directory, there is a `job_config.yaml` file that contains the parameters to run your job.
-
-Here is a short explanation of each parameters
-
-### 1. `funding_group_id:` - This is how your job is billed. Please do not change this.
-
-| Funding Group Name   | ID                                   |
-| -------------------- | ------------------------------------ |
-| Test                 | 5e9e3b08-0063-41ac-a782-d4964cfb8960 |
-
-
-### 2. `environment_id:` (optional) - This is the hardware that is used to run your job.
-You can change to any of the environmetns that you have permission to use.
-
-| Environment | ID                                   |
-| ----------- | ------------------------------------ |
-| CPU Only    | 29cf5d14-7dee-4a76-86fc-5a2971c76d96 |
-| A10 GPU     | 733c1c70-a85a-4d1d-8974-28e189649955 |   <--Default for the examples
-| T4 GPU      | 836d7c78-f2da-4c8d-b769-a3cbb8d4e2f4 |
-
-### 3. `image:` (optional) - This is the container image that is used for your job.
-Postiron automatically chooses a default image.
-
-| Image Name                                       |
-| -------------------------------------------------|          
-| pytorch-training:2.2.0-cpu-py310-ubuntu20.04-ec2 |
-| pytorch-training:2.1.0-cpu-py310-ubuntu20.04-ec2 |
-| pytorch-training:1.13.1-cpu-py39-ubuntu20.04-ec2 |
-
-### 4. `max_tokens:` (optional) - Maximum number of tokens your job can consume before Positron automatically stops it.
-
-For example:
+### Step 4. Install the Robbie Python package and log in
 ```sh
-max_tokens: "100"
+pip install robbie
 ```
 
-### 5. `max_time:` (optional) - Maximum time your job can run before Positron automatically stops it.
-
-For example:
+The following command will pop up a web browser and ask you to log in.
 ```sh
-max_time: "2:30"
+robbie login
 ```
 
-### 6. `commands:` One or more shell commands to run on the remote machine in Postiron's cloud.
+After completing login in your browser, you should see `Authenticated!` printed to your console output. 
 
-For example:
+## Run Your First Job
+macOS/Linux
 ```sh
-  commands: |
-    python main.py
+cd getting_started/command_runner && robbie run
 ```
 
+Windows
+```shell
+cd .\getting_started\command_runner
+```
+then
+```shell
+robbie run
+```
 
+Hit enter to confirm the job settings. You should see the Run Details printed to your console.
+![Run Details](img/getting_started_run_details.png)
+
+Take note of the job name (e.g. `disturbed_monkey`) then go to the [Robbie Portal](https://robbie.run/portal/app/my-runs) in your browser to monitor the job.
+
+You can also run with `--tail` to see realtime job logs in your console.
+
+```sh
+robbie run --tail
+```
+
+See all available CLI options with 
+```shell
+ robbie run --help
+```
+
+### Congratulations - you have run your first job!
+Try other examples by navigating into each directory within [command_runner](./command_runner) and executing
+```sh
+robbie run
+```
+
+## Command Runner
+In each [command_runner](./command_runner) example directory, there is a `job_config.yaml` file that contains the parameters to run your job. The `python_job` 
+object must be defined, and it must contain the `commands` parameter. The `commands` can be any valid commands that you can 
+execute from within the same directory as the yaml file.
+
+**Minimal `job_config.yaml`**
+```yaml
+version: 1.0
+python_job:
+  commands:
+    - python main.py
+```
+**`job_config.yaml` with Multiple Commands**
+```yaml
+version: 1.0
+python_job:
+  commands:
+    - pip install -r requirements.txt
+    - python main.py
+```
+
+### Optional Parameters  
+- `name` Job name that appears in the Portal 
+- `funding_group_id` If you want to use a Funding Group other than your Personal Funding Group, set the id here. Check [My Resources](https://robbie.run/portal/app/my-resources) in the Robbie Portal to see if you have access to Funding Groups. The Funding Group id will be displayed when you select one on this page.
+- `environment_id` If you want to use an environment other than the default, set the id here. View [My Resources](https://robbie.run/portal/app/my-resources) and expand the environment to see the id.
+- `image` The [Image](#images) to use for job execution
+- `max_tokens` Maximum number of tokens to use for the job
+- `max_time` Maximum time to allot for job execution, in hh:mm. For example, `0:30` is 30 minutes.
+- `workspace_dir` Directory on your machine containing the files you want to be uploaded when Robbie prepares your job.
+
+**Example `job_config.yaml` with Optional Parameters**  
+Note: These values are for example purposes only.
+```yaml
+version: 1.0
+python_job:
+  name: Sample Job
+  funding_group_id: 95127aac-186b-4076-8c5b-ab1n3n34321
+  environment_id: 936d7c78-f2da-4c8d-b769-b3bbb8b4b2b4
+  image: robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04
+  max_tokens: 5
+  max_time: 0:30
+  workspace_dir: ~/robbie-workspace
+  commands:
+    - pip install -r requirements.txt
+    - python main.py
+```
+
+### `robbie run` Options
+Options that you set in the `robbie run` command override those that may be set in the `job_config.yaml`. View the available options by executing
+```shell
+robbie run --help
+```
+
+## Images
+| Python Version | PyTorch Version | CPU/GPU | Image                                        |
+|----------------|-----------------|---------|----------------------------------------------|
+| 3.9            | 2.0             | GPU     | robbie:1.0.0-gpu-py3.9-torch2.0-ubuntu22.04  |
+| 3.10           | 2.2             | GPU     | robbie:1.0.0-gpu-py3.10-torch2.2-ubuntu22.04 |
+| 3.11           | 2.4             | GPU     | robbie:1.0.0-gpu-py3.11-torch2.4-ubuntu22.04 |
+| 3.12           | 2.5             | GPU     | robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04 |
+| 3.9            | 2.0             | CPU     | robbie:1.0.0-cpu-py3.9-torch2.0-ubuntu22.04  |
+| 3.10           | 2.2             | CPU     | robbie:1.0.0-cpu-py3.10-torch2.2-ubuntu22.04 |
+| 3.11           | 2.4             | CPU     | robbie:1.0.0-cpu-py3.11-torch2.4-ubuntu22.04 |
+| 3.12           | 2.5             | CPU     | robbie:1.0.0-cpu-py3.12-torch2.5-ubuntu22.04 |

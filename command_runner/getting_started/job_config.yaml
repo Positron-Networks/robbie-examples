@@ -1,0 +1,9 @@
+version: 1.0
+python_job:
+  env:
+    TEST_ENV_VAR: hello-world
+  max_tokens: 1
+  max_time: 0:30
+  commands:
+    - python main.py
+  
