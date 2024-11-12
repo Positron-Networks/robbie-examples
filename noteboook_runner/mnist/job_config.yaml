@@ -1,4 +1,0 @@
-python_job:
-  commands:
-  - python notebook_run.py
-version: 1.0

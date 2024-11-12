@@ -1,9 +1,6 @@
 version: 1.0
 python_job:
-  # Dev
-  funding_group_id: 5e9e3b08-0063-41ac-a782-d4964cfb8960
-  environment_id: 733c1c70-a85a-4d1d-8974-28e189649955
-  # image: pytorch-training:2.3.0-gpu-py311-cu121-ubuntu20.04-ec2
-  commands: |
-    pip install -r requirements.txt
-    python main.py --save-model
+  environment_id: 52dbdaa5-eb8e-4a3d-9745-77db52b91b34
+  commands: 
+    - pip install -r requirements.txt
+    - python main.py --save-model

@@ -1,0 +1,10 @@
+version: 1.0
+python_job:
+  environment_id: 52dbdaa5-eb8e-4a3d-9745-77db52b91b34
+  workspace_dir: .
+  commands:
+  - export PATH=$PATH:/home/job_user/.local/bin:$PATH:/home/positron/.local/bin
+  - pip install -r requirements.txt
+  - "tune download meta-llama/Meta-Llama-3-8B-Instruct --output-dir /tmp/Meta-Llama-3-8B-Instruct --hf-token '<hf token>' "
+  - tune run lora_finetune_single_device --config llama3/8B_lora_single_device
+
