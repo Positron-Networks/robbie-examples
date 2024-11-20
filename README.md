@@ -9,7 +9,7 @@ For support, email: support@robbie.run
 
 [Setup](#setup)  
 [Run Your First Job](#run-your-first-job)  
-[Command Runner](#command-runner)
+[Command Runner](#command-runner)  
 [Images](#images)
 
 ## Setup
@@ -147,13 +147,13 @@ robbie run --help
 ```
 
 ## Images
-| Python Version | PyTorch Version | CPU/GPU | Image                                        |
-|----------------|-----------------|---------|----------------------------------------------|
-| 3.9            | 2.0             | GPU     | robbie:1.0.0-gpu-py3.9-torch2.0-ubuntu22.04  |
-| 3.10           | 2.2             | GPU     | robbie:1.0.0-gpu-py3.10-torch2.2-ubuntu22.04 |
-| 3.11           | 2.4             | GPU     | robbie:1.0.0-gpu-py3.11-torch2.4-ubuntu22.04 |
-| 3.12           | 2.5             | GPU     | robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04 |
-| 3.9            | 2.0             | CPU     | robbie:1.0.0-cpu-py3.9-torch2.0-ubuntu22.04  |
-| 3.10           | 2.2             | CPU     | robbie:1.0.0-cpu-py3.10-torch2.2-ubuntu22.04 |
-| 3.11           | 2.4             | CPU     | robbie:1.0.0-cpu-py3.11-torch2.4-ubuntu22.04 |
-| 3.12           | 2.5             | CPU     | robbie:1.0.0-cpu-py3.12-torch2.5-ubuntu22.04 |
+| Python Version | PyTorch Version | CPU/GPU | Image                                             |
+|----------------|-----------------|---------|---------------------------------------------------|
+| 3.9            | 2.0             | GPU     | robbie:1.0.0-gpu-py3.9-torch2.0-ubuntu22.04-beta  |
+| 3.10           | 2.2             | GPU     | robbie:1.0.0-gpu-py3.10-torch2.2-ubuntu22.04-beta |
+| 3.11           | 2.4             | GPU     | robbie:1.0.0-gpu-py3.11-torch2.4-ubuntu22.04-beta |
+| 3.12           | 2.5             | GPU     | robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04-beta |
+| 3.9            | 2.0             | CPU     | robbie:1.0.0-cpu-py3.9-torch2.0-ubuntu22.04-beta  |
+| 3.10           | 2.2             | CPU     | robbie:1.0.0-cpu-py3.10-torch2.2-ubuntu22.04-beta |
+| 3.11           | 2.4             | CPU     | robbie:1.0.0-cpu-py3.11-torch2.4-ubuntu22.04-beta |
+| 3.12           | 2.5             | CPU     | robbie:1.0.0-cpu-py3.12-torch2.5-ubuntu22.04-beta |

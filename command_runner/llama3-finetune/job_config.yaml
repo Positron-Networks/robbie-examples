@@ -1,8 +1,8 @@
 version: 1.0
 python_job:
   workspace_dir: .
-  image: robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04-alpha
-  environment_id:
+  image: robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04-beta
+  environment_id: e4e3f767-392b-4b4a-9a67-1b8807c3706c
   commands:
   - pip install -r requirements.txt
   - "tune download meta-llama/Meta-Llama-3-8B-Instruct --output-dir /tmp/Meta-Llama-3-8B-Instruct --hf-token '<your hugging face token>' "
