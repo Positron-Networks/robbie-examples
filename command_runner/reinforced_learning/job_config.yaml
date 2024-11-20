@@ -1,0 +1,6 @@
+version: 1.0
+python_job:
+  environment_id: 52dbdaa5-eb8e-4a3d-9745-77db52b91b34
+  commands:
+    - pip install -r requirements.txt
+    - python reinforce.py
