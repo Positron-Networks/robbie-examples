@@ -1,5 +1,4 @@
 python_job:
   commands:
   - pip install -r cell_requirements.txt && pip install dill && python cell_output.py
-  environment_id: 6db2312f-eeb4-49f5-a687-e58952bc3b32
 version: 1.0
