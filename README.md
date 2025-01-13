@@ -149,7 +149,7 @@ robbie run --help
 ## Images
 | Python Version | PyTorch Version | CPU/GPU | Image                                             |
 |----------------|-----------------|---------|---------------------------------------------------|
-| 3.9            | 1.13            | GPU     | robbie:1.0.0-gpu-py3.9-torch1.13-ubuntu22.04-beta |
+| 3.9            | 2.0             | GPU     | robbie:1.0.0-gpu-py3.9-torch2.0-ubuntu22.04-beta  |
 | 3.10           | 2.2             | GPU     | robbie:1.0.0-gpu-py3.10-torch2.2-ubuntu22.04-beta |
 | 3.11           | 2.4             | GPU     | robbie:1.0.0-gpu-py3.11-torch2.4-ubuntu22.04-beta |
 | 3.12           | 2.5             | GPU     | robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04-beta |
