@@ -1,9 +1,12 @@
-version: 1.0
+version: 1.1
 python_job:
+  job_type: BASH_COMMAND_RUNNER
+  mode: python
   env:
     TEST_ENV_VAR: hello-world
   max_tokens: 1
   max_time: 0:30
+  include_local_dir: true
   commands:
     - python main.py
   
