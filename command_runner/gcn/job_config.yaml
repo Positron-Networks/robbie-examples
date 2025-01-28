@@ -1,0 +1,13 @@
+version: 1.1
+python_job:
+  job_type: BASH_COMMAND_RUNNER
+  mode: python
+  rpv: '3.12'
+  image: auto-select
+  include_local_dir: true
+  custom_file_filter:
+  - '*.md'
+  dependencies: none
+  commands:
+  - python main.py --epochs 200 --lr 0.01 --l2 5e-4 --dropout-p 0.5 --hidden-dim 16
+    --val-every 20
