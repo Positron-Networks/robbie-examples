@@ -1,5 +1,5 @@
 ## Persistent Storage
-Each Robbie user gets a persistent storage space on the remote machine that they can use for things like dataset storage or model checkpointing across multiple runs.
+Each Robbie user gets a persistent storage space on the remote machine that they can use for things like datasets or model checkpointing across multiple runs.
 
 This directory provides an computer vision example of how to upload and access data sets using persistent storage.
 
