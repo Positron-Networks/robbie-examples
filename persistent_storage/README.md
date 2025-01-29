@@ -3,10 +3,10 @@ Each Robbie user gets a persistent storage space on the remote machine that they
 
 This directory provides an computer vision example of how to upload and access data sets using persistent storage.
 
-`cv_example.py` - Example code from https://github.com/huggingface/accelerate/tree/main/examples
-`requirements.txt` - Python dependencies
-`upload_dataset_to_persistent.yaml` - Robbie run configuration to upload the dataset from an internet location to Robbie persistent storage.
-`run_cv_example.yaml` - Robbie run configuration to execute the demo code in the Robbie cloud.
+- `cv_example.py` - Example code from https://github.com/huggingface/accelerate/tree/main/examples
+- `requirements.txt` - Python dependencies
+- `upload_dataset_to_persistent.yaml` - Robbie run configuration to upload the dataset from an internet location to Robbie persistent storage.
+- `run_cv_example.yaml` - Robbie run configuration to execute the demo code in the Robbie cloud.
 
 ### Background - Directory structure on the remote machine
 To better understand how to use Robbie, let's explore the runtime environment when your code starts to run in Robbie. Your code will have access to the following directory structure:
