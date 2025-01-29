@@ -1,0 +1,13 @@
+version: 1.1
+python_job:
+  job_type: BASH_COMMAND_RUNNER
+  mode: generic
+  funding_group_id: cecfc347-5680-4fb0-ae99-b029941b08dd
+  environment_id: 52dbdaa5-eb8e-4a3d-9745-77db52b91b34
+  image: auto-select
+  include_local_dir: true
+  commands:
+  - wget https://www.robots.ox.ac.uk/~vgg/data/pets/data/images.tar.gz
+  - mkdir ../persistent-disk/cv_example
+  - mv ./images.tar.gz ../persistent-disk/cv_example
+  - ls ../persistent-disk/cv_example

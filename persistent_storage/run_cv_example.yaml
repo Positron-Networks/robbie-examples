@@ -1,0 +1,15 @@
+version: 1.1
+python_job:
+  job_type: BASH_COMMAND_RUNNER
+  mode: python
+  funding_group_id: cecfc347-5680-4fb0-ae99-b029941b08dd
+  environment_id: 16abcbd3-ef81-4720-98d2-0aa7480a10f1
+  image: auto-select
+  include_local_dir: true
+  dependencies: requirements.txt
+  commands:
+  - cp ../persistent-disk/cv_example/images.tar.gz .
+  - tar -xzf images.tar.gz
+  - python ./cv_example.py --data_dir ./images
+  - rm -rf images
+  - rm images.tar.gz
