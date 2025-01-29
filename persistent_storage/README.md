@@ -53,7 +53,7 @@ This download the image dataset into `/home/job-user/job-execution`
 - Step 3 - `mv ./images.tar.gz ../persistent-disk/cv_example` - move the tar file over. Keep it zip for now.
 - Step 4 - `ls ../persistent-disk/cv_example` - show the the file was moved.
 
-To execute this steps on robbie, type:
+To execute theses steps on robbie, type:
 ```bash
 robbie run --f upload_dataset_to_persistent.yaml --y --tail
 ``` 
@@ -97,7 +97,7 @@ The `commands` are the important thing here.
 - Step 4 - `rm -rf images` - deletes the `images` directory so it will not be uploaded to job artifacts.
 - Step 5 - `rm images.tar.gz` - deletes the tar file so it will not be uploaded to job artifacts.
 
-To execute this steps on robbie, type:
+To execute these steps on robbie, type:
 ```bash
 robbie run --f run_cv_example.yaml --y --tail
 ``` 
