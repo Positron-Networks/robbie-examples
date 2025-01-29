@@ -2,7 +2,6 @@ version: 1.1
 python_job:
   job_type: BASH_COMMAND_RUNNER
   mode: python
-  rpv: '3.12'
   image: auto-select
   include_local_dir: true
   dependencies: none

@@ -1,10 +1,14 @@
-version: 1.0
+version: 1.1
 python_job:
-  workspace_dir: .
-  image: robbie:1.0.0-gpu-py3.12-torch2.5-ubuntu22.04-beta
-  environment_id: e4e3f767-392b-4b4a-9a67-1b8807c3706c
+  job_type: BASH_COMMAND_RUNNER
+  mode: python
+  image: auto-select
+  include_local_dir: true
+  custom_file_filter:
+  - '*.md'
+  dependencies: requirements.txt
   commands:
-  - pip install -r requirements.txt
-  - "tune download meta-llama/Meta-Llama-3-8B-Instruct --output-dir /tmp/Meta-Llama-3-8B-Instruct --hf-token '<your hugging face token>' "
-  - tune run lora_finetune_single_device --config llama3/8B_lora_single_device
+    - "tune download meta-llama/Meta-Llama-3-8B-Instruct --hf-token '<your hugging face token>' "
+    - tune run lora_finetune_single_device --config llama3/8B_lora_single_device
+
 
