@@ -82,8 +82,9 @@ def check_performance(model, device, test_loader, epoch):
         )
     )
 
-@remote(tail=True, 
-    environment_id="e4e3f767-392b-4b4a-9a67-1b8807c3706c"
+@remote(
+    tail=True, 
+    dependencies="./requirements.txt"
 )
 def perform_train(
     train_data,
