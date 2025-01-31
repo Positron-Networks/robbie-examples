@@ -1,4 +1,6 @@
+version: 1.1
 python_job:
+  job_type: BASH_COMMAND_RUNNER
+  include_local_dir: true
   commands:
   - pip install -r cell_requirements.txt && pip install dill && python cell_output.py
-version: 1.0
