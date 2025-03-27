@@ -1,0 +1,25 @@
+version: 1.1
+python_job:
+  job_type: BASH_COMMAND_RUNNER
+  mode: generic
+  funding_group_id: cecfc347-5680-4fb0-ae99-b029941b08dd
+  environment_id: b24eea3d-c095-4b68-a5a7-85a02f85d1f1 
+  image: auto-select
+  include_local_dir: true
+  custom_file_filter:
+    - "*.csv"
+  env:
+    HF_TOKEN: <insert your HF token here>
+  commands:
+    - pip install uv
+    - uv venv
+    - uv pip install setuptools vllm nvitop pandas --link-mode=copy
+    - uv pip install flashinfer-python -i https://flashinfer.ai/whl/cu124/torch2.6 --link-mode=copy
+    - export PATH="$PATH:.venv/bin"
+    - echo -n "Copying .csv file to current directory..."
+    - cp /home/job-user/persistent-disk/dialogueText_301_cleaned_v2.csv .
+    - echo "Done!"
+    - echo -n "Running batch_infer.py..."
+    - uv run python batch_infer.py --chunk 75 --rows 1000
+    - echo "Done!"
+    - rm ./dialogueText_301_cleaned_v2.csv
